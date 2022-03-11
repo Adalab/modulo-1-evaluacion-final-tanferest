@@ -1,0 +1,23 @@
+.module2 {
+    background-color: $background1;
+    color: $text1;
+    &__title {
+        font-size: $moduleTitle;
+        text-align: center;
+        &--span {
+            text-transform: uppercase;
+        }
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &--subtitle {
+            font-size: 1.25rem;
+        }
+        &--content {
+            text-align: center;
+        }
+    }
+}

@@ -26,6 +26,9 @@
     position: fixed;
     top: 55px;
     left: 33px;
+    &__burguer {
+        color: $text1;
+    }
     &__list {
     display: none;
     }
