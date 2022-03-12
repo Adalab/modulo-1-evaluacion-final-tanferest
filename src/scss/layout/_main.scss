@@ -83,7 +83,10 @@
     color: $text1;
     text-align: center;
     &__item {
-        padding: 90px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 90px 27px;
         &--content {
             margin-bottom: 30px;
         }
