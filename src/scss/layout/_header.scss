@@ -5,13 +5,21 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @include tablet {
+        align-items: flex-start;
+        padding-left: 150px;
+        padding-top: 80px;
+    }
     &__logo {
         position: absolute;
-        top: 19px;
+        top: 20px;
         left: 50%;
         transform: translateX(-50%);
         width: 213px;
         height: 96px;
+        @include tablet {
+            top: 40px;
+        }
     }
     &__title {
         font-size: 1.5rem;
@@ -19,6 +27,7 @@
         margin-bottom: 24px;
         @include tablet {
             font-size: 2.25rem;
+            width: 16ch;
         }
     }
 }
@@ -26,6 +35,10 @@
     position: fixed;
     top: 55px;
     left: 33px;
+    @include tablet {
+        top: 85px;
+        left: 85px;
+    }
     &__burguer {
         color: $text1;
     }
