@@ -1,48 +1,65 @@
 .header {
-    background: url(../images/header.jpg) center / cover;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  background: url(../images/header.jpg) center / cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include tablet {
+    align-items: flex-start;
+    padding-left: 150px;
+    padding-top: 80px;
+  }
+  @include desktop {
+      padding-left: 200px;
+  }
+  &__logo {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 213px;
+    height: 96px;
     @include tablet {
-        align-items: flex-start;
-        padding-left: 150px;
-        padding-top: 80px;
+      top: 40px;
     }
-    &__logo {
-        position: absolute;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 213px;
-        height: 96px;
-        @include tablet {
-            top: 40px;
-        }
+  }
+  &__title {
+    font-size: 1.5rem;
+    color: $text1;
+    margin-bottom: 24px;
+    @include tablet {
+      font-size: 2.25rem;
+      width: 16ch;
     }
-    &__title {
-        font-size: 1.5rem;
-        color: $text1;
-        margin-bottom: 24px;
-        @include tablet {
-            font-size: 2.25rem;
-            width: 16ch;
-        }
-    }
+  }
 }
 .fixnav {
-    position: fixed;
-    top: 55px;
-    left: 33px;
-    @include tablet {
-        top: 85px;
-        left: 85px;
+  position: fixed;
+  top: 55px;
+  left: 33px;
+  @include tablet {
+    top: 85px;
+    left: 85px;
+  }
+  @include desktop{
+      left: 200px;
+  }
+  &__burguer {
+    color: $text1;
+    @include desktop {
+      display: none;
     }
-    &__burguer {
-        color: $text1;
-    }
-    &__list {
+  }
+  &__list {
     display: none;
+    &--item {
+      color: $text1;
+      padding-right: 30px;
     }
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+    }
+  }
 }
