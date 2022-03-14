@@ -15,6 +15,9 @@
     grid-template-areas: "title title title" "item1 item2 item3";
     padding: 60px 90px 70px 90px;
   }
+  @include desktop {
+    padding: 10% 40px 10% 80px;
+  }
   &__title {
     width: 322px;
     margin: 0 auto;
@@ -25,7 +28,11 @@
     grid-area: title;
     @include tablet {
       width: 100%;
-      transform:  translateX(-2.5%);
+      transform: translateX(-2.5%);
+    }
+    @include desktop {
+      width: 34ch;
+      font-size: 2.25rem;
     }
   }
   &__item {
@@ -36,6 +43,9 @@
     @include tablet {
       padding-right: 20px;
     }
+    @include desktop {
+      margin-top: 63px;
+    }
     &--img {
       width: 90px;
       height: 100px;
@@ -43,11 +53,18 @@
       @include tablet {
         height: 105px;
       }
+      @include desktop {
+        height: 120px;
+        width: 120px;
+      }
     }
     &--subtitle {
       margin-top: 42px;
       font-size: 1.25rem;
       width: 208px;
+      @include desktop {
+        font-size: 1.5rem;
+      }
     }
     &--content {
       margin-top: 12px;
@@ -87,11 +104,17 @@
     @include tablet {
       font-size: 1.875rem;
     }
+    @include desktop {
+      font-size: 2.25rem;
+    }
   }
   &__content {
-      font-size: 0.875rem;
+    font-size: 0.875rem;
     @include tablet {
       margin-bottom: 20px;
+    }
+    @include desktop {
+      font-size: $textSize;
     }
   }
 }
@@ -107,27 +130,36 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "content img";
+    text-align: left;
   }
   &__item {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 90px 27px;
+    @include desktop {
+      align-items: flex-start;
+      grid-area: content;
+      padding: 180px 25%;
+    }
     &--title {
-        @include tablet {
-            font-size: 1.875rem;
-            width: 430px;
-        }
+      @include tablet {
+        font-size: 1.875rem;
+      }
+      @include desktop {
+        font-size: 2.25rem;
+        width: 15ch;
+      }
     }
     &--content {
-        font-size: 0.875rem;
+      font-size: 0.875rem;
       margin-bottom: 30px;
       @include tablet {
-       width: 400px;
-    }
-    }
-    @include desktop {
-      grid-area: content;
+        width: 400px;
+      }
+      @include desktop {
+        width: 280px;
+      }
     }
   }
   &__img {
@@ -135,7 +167,7 @@
     height: 305px;
     background: url(../images/creando-espacios.jpg) center / cover;
     @include tablet {
-        height: 450px;
+      height: 450px;
     }
     @include desktop {
       grid-area: img;
