@@ -25,8 +25,12 @@
         &--item {
             font-size: 0.875rem;
             color: $text2;
+            transition: text-decoration 0.1s;
             @include desktop {
                 font-size: $textSize;
+            }
+            &:hover {
+                text-decoration: underline;
             }
         }
         &--social {

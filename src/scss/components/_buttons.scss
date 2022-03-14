@@ -1,12 +1,84 @@
 .button1 {
-    background-color: $text1;
-    color: $text3;
-    width: 176px;
-    height: 48px;
+  background-color: $text1;
+  color: $text3;
+  width: 176px;
+  height: 48px;
+  transition: font-size 0.2s, color 0.2s;
+  &:hover {
+    font-size: 1.1rem;
+    color: $text2;
+  }
 }
 
 .button2 {
-    color: $text3;
-    padding: 12px 24px;
-    text-decoration: underline;
+  color: $text3;
+  padding: 12px 24px;
+  text-decoration: underline;
+  transition: color 0.2s;
+  &:hover {
+    color: $text1;
+  }
+}
+
+.button-arrow {
+  position: absolute;
+  right: 28px;
+  bottom: 16px;
+  padding: 5px 5px;
+  @include tablet {
+    right: 56px;
+    bottom: 96px;
+  }
+  &:hover {
+    animation-name: arrow;
+    animation-duration: 0.8s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+    @keyframes arrow {
+      from {
+        transform: translateY(0);
+      }
+
+      10% {
+        transform: translateY(-5%);
+      }
+
+      20% {
+        transform: translateY(-10%);
+      }
+
+      30% {
+        transform: translateY(-15%);
+      }
+
+      40% {
+        transform: translateY(-20%);
+      }
+
+      50% {
+        transform: translateY(-25%);
+      }
+
+      60% {
+        transform: translateY(-30%);
+      }
+
+      70% {
+        transform: translateY(-35%);
+      }
+
+      80% {
+        transform: translateY(-40%);
+      }
+
+      90% {
+        transform: translateY(-45%);
+      }
+
+      to {
+        transform: translateY(-50%);
+      }
+    }
+  }
 }
