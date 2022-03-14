@@ -16,9 +16,6 @@
     grid-template-areas: "title title title" "item1 item2 item3";
     padding: 60px 90px 70px 90px;
   }
-  @include desktop {
-    padding: 10% 40px 10% 80px;
-  }
   &__title {
     width: 322px;
     margin: 0 auto;
