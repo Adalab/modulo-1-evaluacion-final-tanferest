@@ -25,6 +25,7 @@
     grid-area: title;
     @include tablet {
       width: 100%;
+      transform:  translateX(-2.5%);
     }
   }
   &__item {

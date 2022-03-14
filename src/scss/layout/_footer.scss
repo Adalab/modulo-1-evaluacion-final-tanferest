@@ -9,6 +9,7 @@
     padding: 56px 0;
     @include tablet {
         flex-direction: row;
+        align-items: flex-start;
         justify-content: space-evenly;
         padding: 75px 118px;
     }
