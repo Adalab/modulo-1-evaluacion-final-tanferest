@@ -159,6 +159,7 @@
       }
       @include desktop {
         width: 280px;
+        font-size: $textSize;
       }
     }
   }
