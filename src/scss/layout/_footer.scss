@@ -1,44 +1,44 @@
 .footer {
-    position: relative;
-    background-color: $text1;
-    color: $text2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
-    padding: 56px 0;
+  position: relative;
+  background-color: $text1;
+  color: $text2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  padding: 56px 0;
+  @include tablet {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 75px 118px;
+  }
+  &__title {
+    font-size: 1.25rem;
+  }
+  &__nav {
+    padding-top: 30px;
+    width: 208px;
     @include tablet {
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-evenly;
-        padding: 75px 118px;
+      padding: 0;
     }
-    &__title {
-        font-size: 1.25rem;
+    &--item {
+      font-size: 0.875rem;
+      color: $text2;
+      transition: text-decoration 0.1s;
+      @include desktop {
+        font-size: $textSize;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
     }
-    &__nav {
-        padding-top: 30px;
-        width: 208px;
-        @include tablet {
-            padding: 0;
-        }
-        &--item {
-            font-size: 0.875rem;
-            color: $text2;
-            transition: text-decoration 0.1s;
-            @include desktop {
-                font-size: $textSize;
-            }
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-        &--social {
-            display: flex;
-        }
+    &--social {
+      display: flex;
     }
+  }
 }
 
 .social__icon {
-    padding-right: 11px;
+  padding-right: 11px;
 }

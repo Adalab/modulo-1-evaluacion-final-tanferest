@@ -11,8 +11,8 @@
     padding-top: 80px;
   }
   @include desktop {
-      padding-left: 10%;
-      padding-top: 0;
+    padding-left: 10%;
+    padding-top: 0;
   }
   &__logo {
     position: absolute;
@@ -43,8 +43,8 @@
     top: 85px;
     left: 85px;
   }
-  @include desktop{
-      left: 10%;
+  @include desktop {
+    left: 10%;
   }
   &__burguer {
     color: $text1;
@@ -59,8 +59,8 @@
       padding-right: 30px;
     }
     @include desktop {
-        display: flex;
-        justify-content: space-between;
+      display: flex;
+      justify-content: space-between;
     }
   }
 }
